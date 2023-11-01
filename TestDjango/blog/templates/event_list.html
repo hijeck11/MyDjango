@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Мероприятия</title>
+</head>
+<body>
+    <h1>Список мероприятий</h1>
+    <ul>
+        {% for event in events %}
+            <li>
+                <h2>{{ event.title }}</h2>
+                <p>{{ event.description }}</p>
+                <p>Место: {{ event.location }}</p>
+                <p>Дата начала: {{ event.start_date }}</p>
+                <p>Дата окончания: {{ event.end_date }}</p>
+                <p>Зарегистрированные участники:</p>
+                <ul>
+                    {% for registration in registrations %}
+                        {% if registration.event == event %}
+                            <li>{{ registration.attendee_name }} ({{ registration.attendee_email }})</li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

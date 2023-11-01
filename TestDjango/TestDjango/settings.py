@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-!0edr5j07mawl#lgq4^z&$+$(-t7lg8vak1n7j3fl0(638^_mk'
 
-# SECURITY WARNING: don't run with debug turned on in production!
+# SECURITY WARNING: don't run with debug turned on in production2!
 DEBUG = True
 
 ALLOWED_HOSTS = []
@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'test_app'
+    'test_app',
+    'blog'
 ]
 
 MIDDLEWARE = [
