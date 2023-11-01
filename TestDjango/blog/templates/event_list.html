@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Список мероприятий</title>
+</head>
+<body>
+    <h1>Список мероприятий</h1>
+    <ul>
+        {% for event in events %}
+            <li>
+                <a href="{% url 'register_for_event' event.id %}">{{ event.title }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
