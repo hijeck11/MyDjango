@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Список пользователей</title>
+</head>
+<body>
+    <h1>Список пользователей на мероприятиях</h1>
+    <ul>
+        {% for registration in registrations %}
+            <li>
+                Пользователь: {{ registration.attendee_name }}
+                Мероприятие: {{ registration.event.title }}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
