@@ -12,3 +12,6 @@ def adress(request):
 
 def help(request):
     return HttpResponse('<h1>Помощь</h1>')
+
+def flowers(request):
+    return render(request, 'test_app/flowers.html')

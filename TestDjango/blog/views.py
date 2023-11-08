@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .forms import ItemForm
-from .models import UserProfile
+from .forms import UserForm
+
 
 
 from django.shortcuts import render
@@ -34,3 +35,12 @@ def create_item(request):
 def user_list(request):
     registrations = Registration.objects.all()
     return render(request, 'user_list.html', {'registrations': registrations})
+
+def index(request):
+    if request.method == "POST":
+        name = request.POST.get("name")
+        age = request.POST.get("age")
+        return HttpResponse(f"<h2>Привет, {name}, твой возраст: {age}</h2>")
+    else:
+        userform = UserForm()
+        return render(request, "index.html", {"form": userform})

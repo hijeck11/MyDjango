@@ -1,0 +1,12 @@
+body {
+    background-image: url('https://img.goodfon.com/original/2560x1440/f/34/vesna-colorful-wood-tender-spring-flowers-tsvety-khrizantemy.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+    font-size: 46px;
+    display: flex; /* Используем flex-контейнер для центрирования */
+    justify-content: center; /* Горизонтальное выравнивание по центру */
+    align-items: center; /* Вертикальное выравнивание по центру */
+    height: 100vh; /* Устанавливаем высоту контейнера на всю видимую область окна браузера */
+}
