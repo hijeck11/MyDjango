@@ -1,0 +1,148 @@
+body {
+    background-image: url('https://img.goodfon.com/original/1920x1080/a/c2/roza-sneg-rose.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+    font-size: 46px;
+    display: flex; /* Используем flex-контейнер для центрирования */
+    justify-content: center; /* Горизонтальное выравнивание по центру */
+    align-items: center; /* Вертикальное выравнивание по центру */
+    height: 100vh; /* Устанавливаем высоту контейнера на всю видимую область окна браузера */
+    margin: 1px; /* Устанавливаем отступы в 0, чтобы убрать верхний и нижний отступы */
+    padding: 1%; /* Устанавливаем внутренние отступы в 0, чтобы убрать внутренний отступ */
+}
+
+header {
+    background-color: #333; /* Цвет фона */
+    color: white; /* Цвет текста */
+    padding: 10px; /* Внутренний отступ */
+    text-align: center; /* Выравнивание текста по центру */
+}
+
+main {
+    margin: 0 auto; /* Центрирование по горизонтали */
+    color: gray;
+    max-width: 600px; /* Максимальная ширина <main> */
+    padding: 1px; /* Внутренние отступы для контента в <main> */
+    display: flex;
+    flex-wrap: wrap; /* Разрешить перенос элементов на новую строку */
+    justify-content: space-between; /* Равномерное распределение между элементами */
+}
+
+.footer {
+    background-color: #2e34e5;
+    background-size: cover;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    width: 99%;
+    font-size: 19px;
+    font-weight: bold;
+    color: #fafaff;
+}
+
+.content {
+    overflow-y: auto;
+    flex: 3;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 10px; /* Уменьшите значение отступа (например, 10px) */
+    color: gray;
+}
+
+.oval-buttons .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: grey;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    font-size: 25px;
+    margin-top: 5px;
+}
+
+.oval-buttons .bouquet-button:hover + .dropdown-content,
+.oval-buttons .dropdown-content:hover {
+    display: block;
+}
+
+.oval-buttons .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.oval-buttons .dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.oval-button {
+    display: inline-block;
+    font-size: 25px; /* Уменьшенный размер шрифта (здесь 12 пикселей) */
+    width: 180px; /* Ширина кнопки */
+    height: 50px; /* Высота кнопки */
+    line-height: 50px; /* Высота текста внутри кнопки, чтобы он был по центру */
+    border-radius: 10%; /* Задаем скругленные углы, чтобы сделать кнопку овальной */
+    background-color: grey; /* Цвет кнопок */
+    color: white; /* Цвет текста */
+    text-align: center; /* Выравнивание текста по центру */
+    font-weight: bold; /* Жирный шрифт */
+    text-decoration: none; /* Убираем подчеркивание текста */
+    margin: 1px; /* Внешний отступ между кнопками */
+    white-space: nowrap; /* Запрещаем перенос текста */
+}
+
+.static-button {
+    display: block;
+    font-size: 20px; /* Размер текста кнопки */
+    width: 20%; /* Ширина кнопки равна 100% контейнера */
+    padding: 10px; /* Внутренний отступ кнопки */
+    background-color: #4CAF50; /* Цвет фона кнопки */
+    color: white; /* Цвет текста на кнопке */
+    text-align: center; /* Выравнивание текста по центру */
+    text-decoration: none; /* Убираем подчеркивание текста */
+    margin: 5px 0; /* Внешний отступ сверху и снизу кнопки */
+    border: none; /* Убираем границу кнопки */
+    cursor: pointer; /* Изменяем вид курсора при наведении на кнопку */
+}
+
+.static-button:hover {
+    background-color: #45a049; /* Изменяем цвет фона при наведении на кнопку */
+}
+
+.bouquet-container {
+    display: flex;
+    flex-wrap: wrap; /* Разрешаем перенос элементов на следующую строку */
+    justify-content: space-between; /* Равномерное распределение элементов внутри контейнера */
+}
+
+.bouquet-card {
+    width: calc(80% - 10px); /* Ширина 50% с учетом отступов */
+    height: 20px; /* Фиксированная высота карточки */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9); /* Непрозрачный белый фон */
+    margin-right: 10px; /* Отступ между карточками */
+}
+
+.bouquet-card img {
+    max-width: 50px; /* Максимальная ширина изображения */
+    max-height: 50px; /* Максимальная высота изображения */
+}
+
+.bouquet-card h2 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.bouquet-card p {
+    font-size: 14px;
+}
