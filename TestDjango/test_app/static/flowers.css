@@ -31,7 +31,7 @@ main {
 }
 
 .footer {
-    background-color: #2e34e5;
+    background-color: rgba(200, 200, 200, 0.9);
     background-size: cover;
     position: fixed;
     right: 0;
@@ -40,7 +40,6 @@ main {
     width: 99%;
     font-size: 19px;
     font-weight: bold;
-    color: #fafaff;
 }
 
 .content {
