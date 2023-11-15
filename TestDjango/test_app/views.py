@@ -47,3 +47,14 @@ class BookListView(ListView):
     model = Book
     template_name = 'book_list.html'
     context_object_name = 'books'
+
+def library_authors(request, library_id):
+    library = get_object_or_404(Library, pk=library_id)
+    authors = library.get_authors()
+    return render(request, 'library_authors.html', {'library': library, 'authors': authors})
+
+def author_books(request, author_id, library_id):
+    author = get_object_or_404(Author, pk=author_id)
+    library = get_object_or_404(Library, pk=library_id)
+    books = author.get_books_in_library(library)
+    return render(request, 'author_books.html', {'author': author, 'books': books, 'library': library})

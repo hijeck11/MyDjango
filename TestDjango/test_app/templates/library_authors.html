@@ -1,0 +1,34 @@
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#    <meta charset="UTF-8">#}
+{#    <meta name="viewport" content="width=device-width, initial-scale=1.0">#}
+{#    <title>{{ library.name }}</title>#}
+{#</head>#}
+{#<body>#}
+{#    <h1>Список авторов в библиотеке "{{ library.name }}"</h1>#}
+{#    <ul>#}
+{#        {% for author in authors %}#}
+{#            <li>{{ author.first_name_author }} {{ author.second_name_author }} - Дата рождения: {{ author.birthday }}</li>#}
+{#        {% endfor %}#}
+{#    </ul>#}
+{#</body>#}
+{#</html>#}
+
+<!-- Ваш текущий шаблон для отображения авторов в библиотеке -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ library.name }} Authors</title>
+</head>
+<body>
+    <h1>{{ library.name }} Authors</h1>
+    <ul>
+        {% for author in authors %}
+            <li><a href="{% url 'author_books' library_id=library.id author_id=author.id %}">{{ author.first_name_author }} {{ author.second_name_author }}</a> - Birthdate: {{ author.birthday }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
