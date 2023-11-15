@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Library List</title>
+    <title>Библиотеки</title>
 </head>
 <body>
-    <h1>Библиотеки</h1>
+    <h1>Список библиотек:</h1>
     <ul>
         {% for library in libraries %}
-            <li>{{ library.name }} - {{ library.city }}</li>
+            <li><a href="{% url 'library_authors' library_id=library.id %}">{{ library.name }}</a> - {{ library.city }}</li>
         {% endfor %}
     </ul>
 </body>
