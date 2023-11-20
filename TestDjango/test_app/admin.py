@@ -4,6 +4,8 @@ from .models import Library
 from .models import Author
 from .models import Magazine
 from .models import Book
+from .models import Newspaper
+
 
 class CustomAdmin(admin.ModelAdmin):
     list_display = ('id', 'firstname_test', 'lastname_test', 'description')
@@ -33,3 +35,4 @@ class CustomAdminBook(admin.ModelAdmin):
 
 admin.site.register(Magazine)
 admin.site.register(Book)
+admin.site.register(Newspaper)
