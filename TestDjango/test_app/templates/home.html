@@ -48,7 +48,7 @@
     <ul>
         {% for book in books %}
             <li>
-                {{ book.title }} (Volume: {{ book.volume_number }})
+                {{ book.title }} (Том: {{ book.volume_number }})
                 <a href="{% url 'edit_book' book.id %}">Изменить</a>
                 <a href="{% url 'delete_book' book.id %}">Удалить</a>
             </li>
