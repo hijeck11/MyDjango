@@ -19,8 +19,8 @@ def event_list(request):
 
     return render(request, 'event_list.html', context)
 
-def home(request):
-    return HttpResponse('<h1>Главная</h1>')
+# def home(request):
+#     return HttpResponse('<h1>Главная</h1>')
 
 def create_item(request):
     if request.method == 'POST':
