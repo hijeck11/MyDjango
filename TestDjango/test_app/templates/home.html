@@ -1,0 +1,59 @@
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#    <meta charset="UTF-8">#}
+{#    <meta name="viewport" content="width=device-width, initial-scale=1.0">#}
+{#    <title>Home</title>#}
+{#</head>#}
+{#<body>#}
+{#    <h1>Статистика по книгам</h1>#}
+{#    <p>Средняя цена: {{ average_price }}</p>#}
+{#    <p>Минимальная цена: {{ min_price }}</p>#}
+{#    <p>Максимальная цена: {{ max_price }}</p>#}
+{#    <p>Всего книг: {{ total_books }}</p>#}
+{##}
+{#    <h2>Действия:</h2>#}
+{#    <a href="{% url 'add_book' %}">Добавить книгу</a>#}
+{##}
+{#    <h2>List of Books</h2>#}
+{#    <ul>#}
+{#        {% for book in books %}#}
+{#            <li>#}
+{#                {{ book.title }} (Volume: {{ book.volume_number }})#}
+{#                <a href="{% url 'edit_book' book.id %}">Edit</a>#}
+{#                <a href="{% url 'delete_book' book.id %}">Delete</a>#}
+{#            </li>#}
+{#        {% endfor %}#}
+{#    </ul>#}
+{#</body>#}
+{#</html>#}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Библиотека</title>
+</head>
+<body>
+    <h1>Статистика по книгам</h1>
+    <p>Сркдняя цена: {{ average_price }}</p>
+    <p>Mинимальная цена: {{ min_price }}</p>
+    <p>Максимальная цена: {{ max_price }}</p>
+    <p>Всего книг: {{ total_books }}</p>
+
+    <a href="{% url 'add_book' %}">Добавить книгу</a>
+
+    <h2>Список книг:</h2>
+    <ul>
+        {% for book in books %}
+            <li>
+                {{ book.title }} (Volume: {{ book.volume_number }})
+                <a href="{% url 'edit_book' book.id %}">Изменить</a>
+                <a href="{% url 'delete_book' book.id %}">Удалить</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+
