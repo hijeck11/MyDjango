@@ -53,6 +53,12 @@ class Magazine(Books):
     def __str__(self):
         return f"{self.title} (Издание № {self.issue_number})"
 
+class Newspaper(Books):
+    circulation = models.PositiveIntegerField()
+
+    def __str__(self):
+        return f"{self.title} (Тираж {self.circulation})"
+
 """related_name = 'authors': Это аргумент, который устанавливает
 имя обратного связанного поля для Library. Когда вы используете related_name, Django создает
 обратное поле в модели Library, которое позволяет вам обращаться к связанным авторам через объекты библиотек."""
