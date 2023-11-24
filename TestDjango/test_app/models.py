@@ -1,4 +1,10 @@
 from django.db import models
+from ckeditor.fields import RichTextField
+
+class Article(models.Model):
+    title = models.CharField(max_length=255)
+    content = RichTextField(blank=True, null=True)
+
 
 class Testmodel(models.Model):
     firstname_test = models.CharField(max_length=100)
