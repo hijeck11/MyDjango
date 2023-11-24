@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'test_app',
-    'blog'
+    'blog',
+    'ckeditor',
 ]
 
 MIDDLEWARE = [
@@ -141,3 +142,23 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Настройки для python-telegram-bot
+TELEGRAM_BOT = {
+    'TOKEN': '6887121770:AAFQCwb0tTDi4ReHoSlZsd5xEqkfvkHKtq8',  # Замените 'YOUR_BOT_TOKEN' на токен вашего бота
+    'BASE_URL': 'https://api.telegram.org',
+}
+
+# Настройки для django-telegram-bot
+DJANGO_TELEGRAMBOT = {
+    'MODE': 'POLLING',
+    'WEBHOOK_SITE': 'example.com',
+    'BOTS': [
+        {
+            'TOKEN': '6887121770:AAFQCwb0tTDi4ReHoSlZsd5xEqkfvkHKtq8',
+            'ALLOWED_UPDATES': ['message'],
+        },
+    ],
+}
+
+LOGGING_CONFIG = None

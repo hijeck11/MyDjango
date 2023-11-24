@@ -1,10 +1,16 @@
-from django.db.models.signals import post_save
+from django.db.models.signals import post_save, post_delete
+from .models import Library
 from django.dispatch import receiver
-from django.db import models
-from .models import Author
+from .bot import *
 
-@receiver(post_save, sender=Author)
-def author_created(sender, instance, created, **kwargs):
-    if created:
-        print(f"Добавлен новый писатель: {instance}")
-        # Здесь вы можете выполнять другие действия или отправлять уведомления
+
+
+
+@receiver(post_save, sender=Library)
+def post_save_data(sender, **kwargs):
+    bot_save()
+
+
+@receiver(post_delete, sender=Library)
+def post_save_data(sender, **kwargs):
+    bot_delete()
